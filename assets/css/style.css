@@ -1,0 +1,385 @@
+/* Global CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --heading-color: rgba(128, 128, 128, 0.95);
+  --font-color: black;
+  --border: solid grey 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px 20px 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  border-radius: 10px;
+}
+
+p {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+a {
+  color: black;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+h1 {
+  background-color: var(--heading-color);
+  color: var(--font-color);
+  padding: 10px 50px;
+  font-size: 2em;
+}
+
+h2 {
+  padding: 5px;
+  font-size: 1.5em;
+  margin: 5px;
+  background-color: var(--heading-color);
+  color: var(--font-color);
+  padding: 10px 10px;
+}
+
+hr {
+  border: var(--border);
+  min-width: 90vw;
+}
+
+/* Header and Nav CSS */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 5px 5px 0;
+}
+
+header ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  margin-top: -25px;
+  margin-bottom: -15px;
+}
+
+header a {
+  border-bottom: var(--border);
+}
+
+/* Banner CSS */
+
+.hero-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 0 -20px 0 -20px;
+  background-image: url(../images/Banner.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.hero-banner div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-banner h2 {
+  background-color: var(--heading-color);
+  color: var(--font-color);
+  border-radius: 10px;
+}
+
+.hero-banner img {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  filter: grayscale(100%);
+  cursor: crosshair;
+}
+
+.hero-banner img:hover {
+  filter: grayscale(0%);
+}
+
+/* About and Portfolio CSS */
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:5px;
+}
+
+.about-container div {
+  text-align: center;
+  font-size: 15px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border: var(--border);
+  filter: grayscale(100%);
+  border-radius: 10px;
+}
+
+.image-container img:hover {
+  filter: grayscale(0%);
+  transition: 1s ease;
+  box-shadow:
+  1px 1px #373737,
+  2px 2px #373737,
+  3px 3px #373737,
+  4px 4px #373737;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px; 
+  left: 0%;
+  border-left: var(--border);
+  background-color: var(--heading-color);
+  color: var(--font-color);
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+figcaption {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+img[src*="Interior"] {
+  cursor: not-allowed;
+}
+
+img[src*="Galaxy"] {
+  cursor: not-allowed;
+}
+
+img[src*="SEO"] {
+  cursor: not-allowed;
+}
+
+.placeholder {
+  cursor: not-allowed;
+}
+
+/* Footer CSS */
+
+footer div a {
+  padding: 5px;
+  border-bottom: var(--border);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media Queries / Responsive CSS */
+
+@media screen and (min-width: 768px) {
+
+  /* Global CSS */
+
+  body {
+    padding: 0 20px 20px 0;
+  }
+
+  h1 {
+    padding: 10px 10px 10px 50px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    padding: 10px 10px 10px 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border-radius: 0 10px 10px 0;
+  }
+
+  hr {
+    display: none;
+  }
+
+  /* Changes on hover CSS */
+
+  header a:hover, footer div:hover {
+    background-color: var(--heading-color);
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.5s ease;
+    box-shadow:
+    1px 1px #373737,
+    2px 2px #373737,
+    3px 3px #373737,
+    4px 4px #373737;
+  }
+
+  /* Header and Nav CSS */
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header ul {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 50vw;
+  }
+
+  /* Banner CSS */
+  
+  .hero-banner {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .hero-banner h2 {
+    margin: 0 20px 20px 0;
+  }
+
+  .hero-banner img {
+    position: absolute;
+    top: 26px;
+    left: 40px;
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
+    filter: grayscale(100%)
+  }
+
+  /* About and Portfolio CSS */
+
+  .about-container {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .about-container h2 {
+    flex-basis: 20%;
+    margin-left: 0px;
+    margin-bottom: 35px;
+    margin-right: auto;
+    align-self: flex-start;
+  }
+
+  .about-container div {
+    flex-basis: calc(76% + 5px);
+    text-align: left;
+    border: var(--border);
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .portfolio-container {
+    margin-bottom: 20px;
+  }
+
+  .portfolio-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .portfolio-row-1 {
+    justify-content: space-between;
+  }
+
+  .portfolio-row-1 h2 {
+    flex-basis: 20%;
+    margin-left: 0px;
+    margin-top: -1px;
+  }
+
+  .portfolio-row-1 div {
+    flex-basis: calc(76% + 5px);
+  }
+
+  .portfolio-row-2 {
+    gap: 5px;
+    justify-content: flex-end;
+  }
+
+  .portfolio-row-2 div {
+    flex-basis: 38%;
+  }
+
+  /* Footer CSS */
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-container {
+    flex-direction: row;
+  }
+
+  .contact-container h2 {
+    margin-left: 0px;
+    flex-basis: 20%;
+  }
+}
